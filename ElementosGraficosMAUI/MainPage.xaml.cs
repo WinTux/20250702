@@ -1,4 +1,5 @@
-﻿using System.Timers;
+﻿using ElementosGraficosMAUI.Pages;
+using System.Timers;
 
 namespace ElementosGraficosMAUI
 {
@@ -7,13 +8,12 @@ namespace ElementosGraficosMAUI
         public MainPage()
         {
             InitializeComponent();
-            var temporizador = new System.Timers.Timer(1000);
-            temporizador.Elapsed += new System.Timers.ElapsedEventHandler(RedibujarReloj);
-            temporizador.Start();
+            
         }
-        public void RedibujarReloj(object sender, ElapsedEventArgs e) {
-            var graphicsView = this.relojGraphicsView;
-            graphicsView.Invalidate();
+        
+        async void OnEjemplo1Clic(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Ejemplo1page));
         }
     }
 

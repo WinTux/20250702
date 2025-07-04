@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ElementosGraficosMAUI.MainPage"
-             xmlns:dibujable="clr-namespace:ElementosGraficosMAUI.Dibujables">
+             Title="Lista de ejemplos">
 
-    <ContentPage.Resources>
-        <dibujable:DibujoReloj x:Key="dibujoReloj"/>
-    </ContentPage.Resources>
-    <GraphicsView Drawable="{StaticResource dibujoReloj}" x:Name="relojGraphicsView"></GraphicsView>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Button Text="Ejemplo de Graphics" Clicked="OnEjemplo1Clic"/>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
