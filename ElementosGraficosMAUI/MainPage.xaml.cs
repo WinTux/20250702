@@ -1,24 +1,19 @@
-﻿namespace ElementosGraficosMAUI
+﻿using System.Timers;
+
+namespace ElementosGraficosMAUI
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
+            var temporizador = new System.Timers.Timer(1000);
+            temporizador.Elapsed += new System.Timers.ElapsedEventHandler(RedibujarReloj);
+            temporizador.Start();
         }
-
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        public void RedibujarReloj(object sender, ElapsedEventArgs e) {
+            var graphicsView = this.relojGraphicsView;
+            graphicsView.Invalidate();
         }
     }
 
