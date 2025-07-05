@@ -6,6 +6,7 @@
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(Pages.Ejemplo1page), typeof(Pages.Ejemplo1page));
+            Routing.RegisterRoute(nameof(Pages.ScannerPage), typeof(Pages.ScannerPage));
         }
     }
 }

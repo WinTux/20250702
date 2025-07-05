@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ElementosGraficosMAUI.Pages.ScannerPage"
+             Title="Scanner QR"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.Maui">
+    <VerticalStackLayout>
+        <zxing:CameraBarcodeReaderView
+            x:Name="lectorCodigo"
+            BarcodesDetected="OnCodigoBarrasDetectado"
+            IsDetecting="True"
+            IsTorchOn="False"
+            WidthRequest="300"
+            HeightRequest="300"/>
+
+        <Label x:Name="resultadoCodigo" Text="Leyendo codigo"/>
+    </VerticalStackLayout>
+</ContentPage>

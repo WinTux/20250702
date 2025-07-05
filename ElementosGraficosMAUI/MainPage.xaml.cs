@@ -15,6 +15,10 @@ namespace ElementosGraficosMAUI
         {
             await Shell.Current.GoToAsync(nameof(Ejemplo1page));
         }
+        async void OnEjemplo2Clic(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(ScannerPage));
+        }
     }
 
 }
