@@ -8,6 +8,7 @@
         <VerticalStackLayout>
             <Button Text="Ejemplo de Graphics" Clicked="OnEjemplo1Clic"/>
             <Button Text="Ejemplo de Scanner QR" Clicked="OnEjemplo2Clic"/>
+            <Button Text="Ejemplo de trazos en pantalla" Clicked="OnEjemplo3Clic"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

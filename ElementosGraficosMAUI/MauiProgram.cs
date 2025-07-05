@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Hosting;
 using ZXing.Net.Maui;
 
@@ -20,15 +21,18 @@ namespace ElementosGraficosMAUI
                     h.AddHandler(typeof(ZXing.Net.Maui.Controls.CameraBarcodeReaderView), typeof(CameraBarcodeReaderViewHandler));
                     h.AddHandler(typeof(ZXing.Net.Maui.Controls.CameraView), typeof(CameraViewHandler));
                     h.AddHandler(typeof(ZXing.Net.Maui.Controls.BarcodeGeneratorView), typeof(BarcodeGeneratorViewHandler));
-                });
+                })
+                .UseMauiCommunityToolkit();
             builder.UseBarcodeReader();
             
-            
+
+
 
 
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddTransient<Pages.Ejemplo1page>();
             builder.Services.AddTransient<Pages.ScannerPage>();
+            builder.Services.AddTransient<Pages.TrazosPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();
