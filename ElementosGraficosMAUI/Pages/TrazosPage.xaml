@@ -10,7 +10,12 @@
             BackgroundColor="LightGrey"
             WidthRequest="300"
             HeightRequest="300"
-            HorizontalOptions="Center"/>
-        <Image  HeightRequest="200" HorizontalOptions="Center"/>
+            HorizontalOptions="Center"
+            IsMultiLineModeEnabled="True"
+            LineColor="Tomato"
+            LineWidth="15"
+            DrawingLineCompleted="OnLineaDibujada"
+            />
+        <Image x:Name="imagen" HeightRequest="200" HorizontalOptions="Center"/>
     </VerticalStackLayout>
 </ContentPage>
