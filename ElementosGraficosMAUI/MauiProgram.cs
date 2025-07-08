@@ -24,7 +24,7 @@ namespace ElementosGraficosMAUI
                 })
                 .UseMauiCommunityToolkit();
             builder.UseBarcodeReader();
-            
+            builder.UseMauiMaps();
 
 
 
@@ -33,6 +33,7 @@ namespace ElementosGraficosMAUI
             builder.Services.AddTransient<Pages.Ejemplo1page>();
             builder.Services.AddTransient<Pages.ScannerPage>();
             builder.Services.AddTransient<Pages.TrazosPage>();
+            builder.Services.AddTransient<Pages.Ejemplo4page>();
 
 #if DEBUG
             builder.Logging.AddDebug();

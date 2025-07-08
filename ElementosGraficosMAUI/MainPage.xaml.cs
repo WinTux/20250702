@@ -23,6 +23,10 @@ namespace ElementosGraficosMAUI
         {
             await Shell.Current.GoToAsync(nameof(TrazosPage));
         }
+        async void OnEjemplo4Clic(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Ejemplo4page));
+        }
     }
 
 }
