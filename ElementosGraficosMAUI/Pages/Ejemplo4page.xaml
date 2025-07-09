@@ -6,8 +6,65 @@
              xmlns:ubica="clr-namespace:Microsoft.Maui.Devices.Sensors;assembly=Microsoft.Maui.Essentials"
              Title="Uso de Mapa">
     <Grid>
-        <mapa:Map x:Name="mimapa" IsShowingUser="True" IsTrafficEnabled="True">
-            
+        <mapa:Map x:Name="mimapa" IsShowingUser="False" IsTrafficEnabled="False" MapType="Satellite">
+            <x:Arguments>
+                <mapa:MapSpan>
+                    <x:Arguments>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.501836026137468</x:Double>
+                                <x:Double>-68.1328924542285</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <x:Double>0.01</x:Double>
+                        <x:Double>0.01</x:Double>
+                    </x:Arguments>
+                </mapa:MapSpan>
+            </x:Arguments>
+            <mapa:Map.Pins>
+                <mapa:Pin Label="Plaza del Estudiante"
+                          Address="Av. 16 de Julio, esq. Cañada Strongest"
+                          Type="Place">
+                    <mapa:Pin.Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.50406019309154</x:Double>
+                                <x:Double>-68.1312267227032</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                    </mapa:Pin.Location>
+                </mapa:Pin>
+            </mapa:Map.Pins>
+            <mapa:Map.MapElements>
+                <mapa:Polygon StrokeColor="Tomato" StrokeWidth="7" FillColor="#9955FF00">
+                    <mapa:Polygon.Geopath>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.501711480917233</x:Double>
+                                <x:Double>-68.132814536128</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.501838775121335</x:Double>
+                                <x:Double>-68.1329928172927</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.50193333647587</x:Double>
+                                <x:Double>-68.13290936653475</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.501826045704696</x:Double>
+                                <x:Double>-68.13269884303173</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                    </mapa:Polygon.Geopath>
+                </mapa:Polygon>
+            </mapa:Map.MapElements>
         </mapa:Map>
     </Grid>
 </ContentPage>
