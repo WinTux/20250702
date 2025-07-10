@@ -6,7 +6,7 @@
              xmlns:ubica="clr-namespace:Microsoft.Maui.Devices.Sensors;assembly=Microsoft.Maui.Essentials"
              Title="Uso de Mapa">
     <Grid>
-        <mapa:Map x:Name="mimapa" IsShowingUser="False" IsTrafficEnabled="False" MapType="Satellite">
+        <mapa:Map x:Name="mimapa" IsShowingUser="False" IsTrafficEnabled="False" MapType="Satellite" MapClicked="OnMapaClic">
             <x:Arguments>
                 <mapa:MapSpan>
                     <x:Arguments>
@@ -64,6 +64,52 @@
                         </ubica:Location>
                     </mapa:Polygon.Geopath>
                 </mapa:Polygon>
+                <mapa:Polyline StrokeColor="Blue" StrokeWidth="8">
+                    <mapa:Polyline.Geopath>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.49998967945701</x:Double>
+                                <x:Double>-68.1324471189081</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.49991767030295</x:Double>
+                                <x:Double>-68.13115965862016</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.500668621591704</x:Double>
+                                <x:Double>-68.13232910171503</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.50077149140421</x:Double>
+                                <x:Double>-68.1311382009487</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                        
+                    </mapa:Polyline.Geopath>
+                </mapa:Polyline>
+                <mapa:Circle StrokeColor="Pink" StrokeWidth="12" FillColor="#88ffc0b0">
+                    <mapa:Circle.Center>
+                        <ubica:Location>
+                            <x:Arguments>
+                                <x:Double>-16.50414881835328</x:Double>
+                                <x:Double>-68.13113816956592</x:Double>
+                            </x:Arguments>
+                        </ubica:Location>
+                    </mapa:Circle.Center>
+                    <mapa:Circle.Radius>
+                        <mapa:Distance>
+                            <x:Arguments>
+                                <x:Double>30</x:Double>
+                            </x:Arguments>
+                        </mapa:Distance>
+                    </mapa:Circle.Radius>
+                </mapa:Circle>
             </mapa:Map.MapElements>
         </mapa:Map>
     </Grid>

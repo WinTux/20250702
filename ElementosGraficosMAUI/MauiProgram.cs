@@ -12,6 +12,7 @@ namespace ElementosGraficosMAUI
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkitMediaElement()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -34,6 +35,7 @@ namespace ElementosGraficosMAUI
             builder.Services.AddTransient<Pages.ScannerPage>();
             builder.Services.AddTransient<Pages.TrazosPage>();
             builder.Services.AddTransient<Pages.Ejemplo4page>();
+            builder.Services.AddTransient<Pages.Ejemplo5page>();
 
 #if DEBUG
             builder.Logging.AddDebug();

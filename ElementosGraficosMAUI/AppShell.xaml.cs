@@ -9,6 +9,7 @@
             Routing.RegisterRoute(nameof(Pages.ScannerPage), typeof(Pages.ScannerPage));
             Routing.RegisterRoute(nameof(Pages.TrazosPage), typeof(Pages.TrazosPage));
             Routing.RegisterRoute(nameof(Pages.Ejemplo4page), typeof(Pages.Ejemplo4page));
+            Routing.RegisterRoute(nameof(Pages.Ejemplo5page), typeof(Pages.Ejemplo5page));
         }
     }
 }

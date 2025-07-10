@@ -43,7 +43,7 @@ public partial class Ejemplo4page : ContentPage
         );
 
         // Cambiando el tipo de mapa
-        mimapa.MapType = MapType.Hybrid; // Mapa de calles
+        mimapa.MapType = MapType.Street; // Mapa de calles
 
         // Polígonos y circulos
         Polygon polygon = new Polygon
@@ -60,5 +60,53 @@ public partial class Ejemplo4page : ContentPage
             }
         };
         mimapa.MapElements.Add(polygon);
+    }
+
+    async void OnMapaClic(object sender, MapClickedEventArgs e) { 
+        System.Diagnostics.Debug.WriteLine($"Mapa clic en: {e.Location.Latitude}, {e.Location.Longitude}");
+        Polygon polygon = new Polygon
+        {
+            StrokeColor = Colors.Chocolate,
+            StrokeWidth = 14,
+            FillColor = Color.FromArgb("#AA00FFFF"),
+            Geopath =
+            {
+                new Location(-16.50062849850255, -68.13298724540051), // La Paz, Bolivia
+                new Location(-16.500820967353775, -68.1328022976906), // La Paz, Bolivia
+                new Location(-16.500989647762527, -68.13305039827706), // La Paz, Bolivia
+                new Location(-16.500842593055424, -68.13315189397153) // Volver al inicio
+            }
+        };
+        mimapa.MapElements.Add(polygon);
+
+        Polyline polilyne = new Polyline
+        {
+            StrokeColor = Colors.Indigo,
+            StrokeWidth = 10,
+            Geopath =
+            {
+                new Location(-16.501070743570107, -68.13691307840595), // La Paz, Bolivia
+                new Location(-16.501164022682115, -68.1368620431748), // La Paz, Bolivia
+                new Location(-16.50103098524641, -68.13652393476838), // La Paz, Bolivia
+                new Location(-16.501038631078522, -68.1363293629496), // La Paz, Bolivia
+                new Location(-16.500917826895737, -68.13618901606392), // La Paz, Bolivia
+                new Location(-16.500593775449392, -68.13520347853337),
+                new Location(-16.501126578308696, -68.13449520007748), // La Paz, Bolivia
+                new Location(-16.50039716488863, -68.13403747783914), // La Paz, Bolivia
+                new Location(-16.500982345011973, -68.13331478265691),
+                new Location(-16.500852472006198, -68.13311898140479)
+            }
+        };
+        mimapa.MapElements.Add(polilyne);
+
+        Circle circulo = new Circle
+        {
+            Center = e.Location,
+            StrokeColor = Colors.Green,
+            StrokeWidth = 15,
+            FillColor = Color.FromArgb("#AA00DD00"),
+            Radius = new Distance(100) // Radio de 100 metros
+        };
+        mimapa.MapElements.Add(circulo);
     }
 }
