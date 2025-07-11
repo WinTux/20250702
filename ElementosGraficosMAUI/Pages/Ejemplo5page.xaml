@@ -4,12 +4,55 @@
              x:Class="ElementosGraficosMAUI.Pages.Ejemplo5page"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="Ejemplo de video">
-    <VerticalStackLayout>
-        <toolkit:MediaElement x:Name="video" 
-                              WidthRequest="500" 
-                              HeightRequest="300"
-                              Source="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"/>
-
-
+    <ScrollView>
+        <VerticalStackLayout>
+        
+        <Label Text="Reproductor de video"
+               FontSize="32"
+               HorizontalOptions="Center" />
+        <Label Text="AspectFit"/>
+        <toolkit:MediaElement x:Name="video1" 
+                              WidthRequest="300" 
+                              HeightRequest="100"
+                              Aspect="AspectFit"
+                              Source="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4"/>
+        <Label Text="AspectFill"/>
+        <toolkit:MediaElement x:Name="video2" 
+                      WidthRequest="300" 
+                      HeightRequest="100"
+                      Aspect="AspectFill"
+                      Source="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4"/>
+        <Label Text="Fill"/>
+        <toolkit:MediaElement x:Name="video3" 
+                      WidthRequest="300" 
+                      HeightRequest="100"
+                      Aspect="Fill"
+                      Source="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4"/>
+        <Label Text="Controles"/>
+        <toolkit:MediaElement x:Name="video4" 
+              WidthRequest="300" 
+              HeightRequest="100"
+              Aspect="Fill"
+              Volume="1"
+              ShouldAutoPlay="True"
+              ShouldLoopPlayback="True"
+              ShouldShowPlaybackControls="False"
+              ShouldKeepScreenOn="True"
+              Source="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4"/>
+        <Button Text="Reproducir/pausar video"
+                Clicked="OnPlayPauseClicked"
+                HorizontalOptions="Center" />
+        <HorizontalStackLayout>
+            <Button Text="-" Clicked="OnReducirVolClic"/>
+            <Button Text="+" Clicked="OnAumentarVolClic"/>
+        </HorizontalStackLayout>
+        <Label Text="Video embebido desde recursos"/>
+        <toolkit:MediaElement x:Name="video5" 
+              WidthRequest="300" 
+              HeightRequest="100"
+              Aspect="AspectFill"
+              Source="embed://SampleVideo_1280x720_1mb.mp4"/>
+        
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
