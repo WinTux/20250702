@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ElementosGraficosMAUI.Pages.Ejemplo6page"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="Ejemplo de Grid">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Label Text="Celda 0,0" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="LightBlue"/>
+        <Button Text="Botón 1" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="LightGreen"/>
+        <Slider Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="100" Value="50" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+        <toolkit:MediaElement x:Name="video10" 
+          Grid.Row="1" Grid.Column="2"
+          WidthRequest="300" 
+          HeightRequest="100"
+          Aspect="AspectFill"
+          ShouldAutoPlay="True"
+          Source="embed://SampleVideo_1280x720_1mb.mp4"/>
+        <Button Text="Ir a otra page" Grid.Row="2" Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="OnIrOtraPageClicked"/>
+    </Grid>
+</ContentPage>
