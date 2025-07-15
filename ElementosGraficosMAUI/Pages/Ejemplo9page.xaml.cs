@@ -30,4 +30,12 @@ public partial class Ejemplo9page : ContentPage
 			return;
         });
     }
+
+	async void OnZoomPositivo(object sender, EventArgs e) { 
+		camara.ZoomFactor += 0.1f;
+    }
+    async void OnZoomNegativo(object sender, EventArgs e)
+    {
+        camara.ZoomFactor -= 0.1f;
+    }
 }
