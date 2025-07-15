@@ -12,6 +12,8 @@
             <Button Text="Ejemplo de mapas" Clicked="OnEjemplo4Clic"/>
             <Button Text="Ejemplo de Multimedia" Clicked="OnEjemplo5Clic"/>
             <Button Text="Ejemplo de Grid layout" Clicked="OnEjemplo6Clic"/>
+            <Button Text="Ejemplo de lectura de archivos" Clicked="OnEjemplo8Clic"/>
+            <Button Text="Ejemplo de captura de foto" Clicked="OnEjemplo9Clic"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

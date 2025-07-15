@@ -38,6 +38,8 @@ namespace ElementosGraficosMAUI
             builder.Services.AddTransient<Pages.Ejemplo5page>();
             builder.Services.AddTransient<Pages.Ejemplo6page>();
             builder.Services.AddTransient<Pages.Ejemplo7page>();
+            builder.Services.AddTransient<Pages.Ejemplo8page>();
+            builder.Services.AddTransient<Pages.Ejemplo9page>();
 
 #if DEBUG
             builder.Logging.AddDebug();

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ElementosGraficosMAUI.Pages.Ejemplo8page"
+             Title="Ejemplo abriendo archivos">
+    <VerticalStackLayout>
+        <Label 
+            Text="Cargando una imagen"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Image x:Name="image" HeightRequest="300" HorizontalOptions="Center" />
+        <Label 
+            x:Name="lblInfo"
+            Text=""
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
+        <Button Text="Cargar imagen" Clicked="OnCargarImagenClicked" HorizontalOptions="Center" VerticalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
