@@ -1,3 +1,6 @@
+using CommunityToolkit.Maui.Views;
+using static Microsoft.Maui.ApplicationModel.Permissions;
+
 namespace ElementosGraficosMAUI.Pages;
 
 public partial class Ejemplo9page : ContentPage
@@ -15,4 +18,16 @@ public partial class Ejemplo9page : ContentPage
             fotito.Source = ImageSource.FromStream(() => flujoFoto);
         }
 	}
+    async void OnTomarFotoClicked2(object sender, EventArgs e)
+    {
+		await camara.CaptureImage(CancellationToken.None);
+    }
+
+    async void OnCapturaTomada(object sender, MediaCapturedEventArgs e)
+    {
+		Dispatcher.Dispatch(() => {
+            fotito2.Source = ImageSource.FromStream(() => e.Media);
+			return;
+        });
+    }
 }
